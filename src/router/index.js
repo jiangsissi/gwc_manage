@@ -47,7 +47,7 @@ const constantRouterMap = [
                     isAlive: true,
                     title: '菜单列表'
                 }
-            }
+            },
         ]
     },
     {
@@ -67,15 +67,15 @@ const constantRouterMap = [
                 }
             },
             {
-                path: '/article_list',
+                path: '/article_detail',
                 name: '详情',
                 component: _import('article/detail'),
                 meta: {
                     auth: false,
                     isAlive: true,
                     title: '文章详情'
-                }
-            },
+                },
+            }
         ]
     },
     {
@@ -83,14 +83,14 @@ const constantRouterMap = [
         name: '404',
         component: _import('error/index'),
         meta: {
-            title: '请求页面未找到',
+            title: "请求页面未找到",
             auth: false
         },
     },
     {
         path: '*',
         meta: {
-            title: '请求页面未找到',
+            title: "请求页面未找到",
             auth: false
         },
         redirect: '/404'
@@ -100,7 +100,7 @@ const constantRouterMap = [
 const router = new Router({
     mode: 'history',
     routes: constantRouterMap,
-    linkActiveClass: 'router-link-active',
+    linkActiveClass: "router-link-active",
 });
 
 export default router

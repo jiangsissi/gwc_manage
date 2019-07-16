@@ -50,7 +50,7 @@ export default {
         // 设置菜单栏
         setMenulist(route){
             let _this = this;
-            if (router.matched[0].path != "") {
+            if (route.matched[0].path != "") {
                 // 多页面菜单栏
                 this.openeds = [route.matched[0].path];
                 this.active = route.fullPath.split("?")[0]; //携带参数时，只匹配"?"前的路径

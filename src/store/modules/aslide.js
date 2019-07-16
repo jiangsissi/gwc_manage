@@ -43,7 +43,7 @@ const aslide = {
                         "path": "/article_detail"
                     }
                 ]
-            },
+            }
         ]
     },
     mutations: {

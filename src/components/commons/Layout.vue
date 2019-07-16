@@ -1,10 +1,15 @@
 <template>
     <el-container>
-        <el-header></el-header>
+        <el-header>
+            <adminHeader />
+        </el-header>
         <el-container>
-            <el-aside width="200px"></el-aside>
+            <el-aside width="200px">
+                <adminAslide />
+            </el-aside>
             <el-container class="loading-area">
                 <el-main>
+                    <adminCrumbs />
                     <keep-alive>
                         <router-view v-if="this.$route.meta.isAlive"></router-view>
                     </keep-alive>
@@ -17,14 +22,14 @@
 </template>
 
 <script>
-// import adminHeader from './Header.vue';
-// import adminAslide from './Aslide.vue';
+import adminHeader from './Header.vue';
+import adminAslide from './Aslide.vue';
 import adminCrumbs from './Crumbs.vue';
 
 export default {
     components: {
-        // adminHeader,
-        // adminAslide,
+        adminHeader,
+        adminAslide,
         adminCrumbs
     }
 }
@@ -44,12 +49,10 @@ export default {
     padding: 0!important;
 }
 .el-aside {
-    // background-color: #D3DCE6;
     width: auto!important;
     color: #333;
     text-align: left;
     overflow: hidden;
-    // line-height: 200px;
 }
 .el-main {
     background-color: #E9EEF3;
