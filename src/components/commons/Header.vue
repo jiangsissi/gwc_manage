@@ -28,10 +28,12 @@ export default {
 .header{
     height: 100%;
     .logo{
-        width: 145px;
+        width: 200px;
         height: 100%;
         cursor: pointer;
         font-size: 30px;
+        background: #eee;
+        text-align: center;
     }
 }
 </style>
